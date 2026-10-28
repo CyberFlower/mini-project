@@ -10,10 +10,9 @@
 - 문서는 간결하고 명확하게 작성한다.
 - 주요 아키텍처 및 구현 방식의 선택 이유를 기록한다.
 - 코드에서 쉽게 확인할 수 있는 세부 구현 내용은 반복하지 않는다.
-- 다음 세 문서를 유지하며 불필요한 중복은 피한다.
-  - `REQUIREMENTS.md`: 요구사항, 제약, 완료 기준
-  - `DESIGN.md`: 아키텍처, 기술 선택과 근거
-  - `IMPLEMENTATION.md`: 구현 순서, 진행 상태, 검증 결과
+- 프로젝트 루트에 단일 `REQUIREMENTS.md`를 유지하고, Feature별 설계와 구현 기록은 `docs/features/<feature>/DESIGN.md`와 `IMPLEMENTATION.md`에서 관리한다.
+- 작업 시 `REQUIREMENTS.md`와 현재 Feature 문서를 읽고, 다른 Feature 문서는 관련이 있을 때만 조회한다.
+- 문서 형식과 세부 사항은 각 문서에서 관리하며 불필요한 중복을 피한다.
 
 ## 3. Implementation
 - 요구사항을 만족하는 가장 단순한 아키텍처를 우선한다.
@@ -22,5 +21,5 @@
 
 ## 4. Verification
 - 주요 기능 구현 후 실제 실행 및 관련 테스트를 수행한다.
-- 테스트 결과와 발견된 문제를 `IMPLEMENTATION.md`에 간결하게 기록한다.
+- 테스트 결과와 발견된 문제를 해당 Feature의 `IMPLEMENTATION.md`에 간결하게 기록한다.
 - 실행하지 않은 테스트를 성공했다고 보고하지 않는다.

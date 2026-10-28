@@ -1,6 +1,6 @@
 # Toy Project Init
 
-작은 프로젝트를 시작할 때 개발 지침과 세 문서를 준비하는 Codex 스킬이다. 기존 프로젝트에서는 내용을 보존하며 부족한 부분만 보완한다.
+작은 프로젝트를 위한 개발 지침, 단일 요구사항 문서와 Feature별 설계·구현 문서를 준비하는 Codex 스킬이다. 기존 프로젝트에서는 내용을 보존하며 부족한 부분만 보완한다.
 
 ## 설치
 
@@ -24,23 +24,28 @@ cp -R skills/toy-project-init ~/.agents/skills/
 ## 사용
 
 ```text
-$toy-project-init으로 이 프로젝트의 개발 지침과 세 문서를 초기 설정해줘.
+$toy-project-init 이 프로젝트의 개발 지침과 단일 REQUIREMENTS.md를 준비해줘.
 프로젝트 목표: CSV 파일에서 월별 지출 합계를 출력하는 작은 CLI.
 ```
 
-스킬은 프로젝트 루트에 다음 파일을 생성하거나 보완한다.
-
-- `AGENTS.md`: 개발 지침
-- `REQUIREMENTS.md`: 요구사항, 제약, 완료 기준
-- `DESIGN.md`: 아키텍처, 기술 선택과 근거
-- `IMPLEMENTATION.md`: 구현 순서, 진행 상태, 검증 결과
-
-스킬 본문은 제공된 개발 지침 원문과 기존 지침 보완에 관한 문단 하나로 구성된다. 이후에는 `AGENTS.md`가 지침을 유지하며, 같은 스킬로 개발을 이어가도록 요청할 수도 있다.
+문서는 다음 구조로 생성하거나 보완한다. Feature 문서는 다음에 구현할 요구사항을 정제한 뒤 필요한 것부터 만든다.
 
 ```text
-$toy-project-init 지침에 따라 REQUIREMENTS.md의 첫 번째 기능을 구현하고 검증해줘.
+AGENTS.md
+REQUIREMENTS.md
+docs/features/<feature>/
+├── DESIGN.md
+└── IMPLEMENTATION.md
+```
+
+`REQUIREMENTS.md` 하나에 전체 요구사항과 개별 Acceptance Criteria를 유지한다. 형식은 [요구사항 템플릿](skills/toy-project-init/assets/REQUIREMENTS.md)을 따른다. Feature별 문서는 요구사항 ID를 참조하며 설계 이유, 구현 상태와 실제 검증 결과를 기록한다.
+
+`AGENTS.md`에는 개발 원칙과 문서 위치·조회 규칙만 둔다. [설계 템플릿](skills/toy-project-init/assets/DESIGN.md)과 [구현 템플릿](skills/toy-project-init/assets/IMPLEMENTATION.md)의 상세 형식은 해당 문서에서 관리한다.
+
+```text
+$toy-project-init REQUIREMENTS.md에서 다음 Feature를 정제하고 설계·구현·검증을 진행해줘.
 ```
 
 ## 지침만 적용
 
-스킬을 설치하지 않고 [개발 지침 원본](skills/toy-project-init/assets/development-guidelines.md)을 프로젝트의 `AGENTS.md`로 복사해도 된다. 기존 파일이 있으면 내용을 통합한다. 이 방식은 세 문서를 자동으로 준비하지 않으므로 첫 작업에서 문서 초기화를 요청한다.
+스킬을 설치하지 않고 [개발 지침](skills/toy-project-init/assets/development-guidelines.md)을 프로젝트의 `AGENTS.md`로 복사해도 된다. 기존 파일이 있으면 내용을 통합한다. 문서를 준비할 때는 위 템플릿을 참고하여 단일 요구사항 원본과 필요한 Feature 문서를 작성한다.
