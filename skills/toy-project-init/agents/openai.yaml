@@ -1,0 +1,4 @@
+interface:
+  display_name: "Toy Project Init"
+  short_description: "Initialize small projects with focused development guidelines"
+  default_prompt: "$toy-project-init으로 이 프로젝트의 개발 지침과 세 문서를 초기 설정해줘."
