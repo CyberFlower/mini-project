@@ -43,6 +43,7 @@ Feature: `feature-documentation`
 
 - Feature별로 `docs/features/<feature>/DESIGN.md`와 `IMPLEMENTATION.md`를 유지한다.
 - 설계에는 관련 요구사항 ID, 구현 방식과 선택 이유가 있다.
+- 설계 템플릿은 상황에 맞는 다이어그램을 우선하고, 관심사별 분리와 불필요한 세부 생략을 안내한다. 선택 이유·제약은 간결한 글로 보완하며 단순한 설계에는 다이어그램을 강제하지 않는다.
 - 구현 기록에는 관련 요구사항 ID, 구현 순서·상태와 실제 검증 결과가 있다.
 - 요구사항 전문과 Acceptance Criteria 정의는 복사하지 않고 루트 원본을 참조한다.
 - 기존 설계·구현 기록은 새 위치로 이동하면서 보존하고 링크를 갱신한다.
@@ -80,4 +81,4 @@ Feature: `skill-bootstrap`
 ## 4. Constraints
 
 - 지침 파일과 스킬 진입점은 `AGENTS.md`, `SKILL.md` 이름을 사용한다.
-- 이번 변경의 커밋과 `main` 브랜치 push는 사용자 승인을 받았다.
+- 커밋과 push는 사용자 사전 승인 후 수행한다.
