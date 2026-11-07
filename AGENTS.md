@@ -8,10 +8,13 @@
 
 ## 2. Documentation
 - 문서는 간결하고 명확하게 작성한다.
-- 주요 아키텍처 및 구현 방식의 선택 이유를 기록한다.
+- 규칙의 선택 이유는 해당 요구사항의 근거에, 구조의 선택 이유는 `ARCHITECTURE.md`에 기록한다.
 - 코드에서 쉽게 확인할 수 있는 세부 구현 내용은 반복하지 않는다.
-- 프로젝트 루트에 단일 `REQUIREMENTS.md`를 유지하고, Feature별 설계와 구현 기록은 `docs/features/<feature>/DESIGN.md`와 `IMPLEMENTATION.md`에서 관리한다.
-- 작업 시 `REQUIREMENTS.md`와 현재 Feature 문서를 읽고, 다른 Feature 문서는 관련이 있을 때만 조회한다.
+- 요구사항은 프로젝트 루트의 `REQUIREMENTS.md`(개요)와 `requirements/<ID>.md`(세부)에서 관리한다. 모든 규칙은 ID가 있는 요구사항 안에 두고, 짧은 요구사항은 세부 파일 없이 개요에 둔다.
+- 구성 요소와 흐름은 루트 `ARCHITECTURE.md`, Feature별 진행 상태와 검증 결과는 `docs/features/<feature>/IMPLEMENTATION.md`에서 관리한다.
+- 작업 시 `REQUIREMENTS.md`와 관련 세부 파일, 현재 Feature 문서를 읽는다. 구조를 바꾸면 `ARCHITECTURE.md`도 읽고, 다른 Feature 문서는 관련이 있을 때만 조회한다.
+- 다이어그램은 Mermaid로 글로 읽기 어려울 때만 두고, 같은 규칙을 글·표·그림으로 중복하지 않는다. 규칙 그림은 요구사항 세부 파일에, 구조 그림은 `ARCHITECTURE.md`에 둔다.
+- `REQUIREMENTS.md` 0절 용어에는 도메인 전문 용어와 프로젝트에서 정한 뜻으로 쓰는 말만 두고, 낱말만으로 뜻이 자명한 일반 용어는 넣지 않는다. 뜻만 간결하게 쓰고 규칙은 본문에 두며, 본문은 0절의 용어를 그대로 쓴다.
 - 문서 형식과 세부 사항은 각 문서에서 관리하며 불필요한 중복을 피한다.
 
 ## 3. Implementation

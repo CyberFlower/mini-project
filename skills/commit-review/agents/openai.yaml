@@ -1,0 +1,4 @@
+interface:
+  display_name: "Commit Review"
+  short_description: "Review commits one by one for intent and test gaps"
+  default_prompt: "$commit-review 이 브랜치의 커밋을 하나씩 보며 의도와 테스트 시나리오를 알려줘."
