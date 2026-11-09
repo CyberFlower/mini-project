@@ -35,7 +35,7 @@ $toy-project-init 이 프로젝트의 개발 지침과 REQUIREMENTS.md를 준비
 프로젝트 목표: CSV 파일에서 월별 지출 합계를 출력하는 작은 CLI.
 ```
 
-대상 프로젝트의 문서는 기본적으로 다음 구조로 생성하거나 보완한다. Feature 문서는 다음에 구현할 요구사항을 정제한 뒤 필요한 것부터 만든다.
+대상 프로젝트의 문서는 기본적으로 다음 구조로 생성하거나 보완한다. 모듈별 문서 분리는 각 템플릿의 기준을 따른다. Feature 문서는 다음에 구현할 요구사항을 정제한 뒤 필요한 것부터 만든다.
 
 ```text
 AGENTS.md
@@ -46,7 +46,7 @@ docs/features/<feature>/
 └── IMPLEMENTATION.md
 ```
 
-`REQUIREMENTS.md`는 전체 요구사항의 개요다. 짧은 요구사항은 그 안에 Acceptance Criteria까지 두고, 긴 요구사항은 `requirements/<ID>.md`에 Acceptance Criteria·다이어그램·근거를 둔다. 형식은 [요구사항 템플릿](skills/toy-project-init/assets/REQUIREMENTS.md)과 [세부 요구사항 템플릿](skills/toy-project-init/assets/requirement-detail.md)을 따른다. `ARCHITECTURE.md`는 구성 요소·흐름과 구조의 선택 이유를, Feature별 `IMPLEMENTATION.md`는 요구사항 ID를 참조해 구현 상태와 실제 검증 결과를 기록한다.
+`REQUIREMENTS.md`는 전체 요구사항의 개요다. 짧은 요구사항은 그 안에 Acceptance Criteria까지 두고, 긴 요구사항은 `requirements/<ID>.md`에 Acceptance Criteria·다이어그램·근거를 둔다. 형식은 [요구사항 템플릿](skills/toy-project-init/assets/REQUIREMENTS.md)과 [세부 요구사항 템플릿](skills/toy-project-init/assets/requirement-detail.md)을 따른다. `ARCHITECTURE.md`는 모듈 구성·흐름과 구조의 선택 이유를, Feature별 `IMPLEMENTATION.md`는 요구사항 ID를 참조해 구현 상태와 실제 검증 결과를 기록한다.
 
 `AGENTS.md`에는 개발 원칙과 문서 위치·조회 규칙만 둔다. [구조 템플릿](skills/toy-project-init/assets/ARCHITECTURE.md)과 [구현 템플릿](skills/toy-project-init/assets/IMPLEMENTATION.md)의 상세 형식은 해당 문서에서 관리한다.
 
